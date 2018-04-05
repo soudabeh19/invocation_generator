@@ -8,7 +8,7 @@ def parse_file (input_file):
         content = [x.strip() for x in content]
     return content
 def write_file (subject,output_base_path):
-    diff_file = open(output_base_path+str(subject)+".json",'w')
+    diff_file = open(output_base_path+"_"+str(subject)+".json",'w')
     content = "{\n"+'\t"freesurfer_license": "$HOME/project/Shared_files/test_pipe_running/license.txt",\n'+'\t"subject_folder": "$HOME/projects/def-glatard/hcp-results/PreFreeSurfer/CentOS5/'+str(subject)+'",\n' + '\t"execution_name": "demo-FS"  \n' + "}"
     diff_file.write(content)
 
